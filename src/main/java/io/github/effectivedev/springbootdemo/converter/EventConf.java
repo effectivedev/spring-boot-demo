@@ -8,11 +8,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class EventConf implements WebMvcConfigurer {
 
-    @Autowired
-    EventConverter eventConverter;
-
-    @Override
-    public void addFormatters(FormatterRegistry registry) {
-        registry.addConverter(eventConverter);
-    }
+//    @Autowired
+//    EventConverter eventConverter;
+//
+//    @Override
+//    public void addFormatters(FormatterRegistry registry) {
+//        registry.addConverter(eventConverter);
+//    }
 }
