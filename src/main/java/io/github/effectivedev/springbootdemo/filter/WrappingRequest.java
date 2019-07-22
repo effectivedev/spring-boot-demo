@@ -33,7 +33,8 @@ public class WrappingRequest extends HttpServletRequestWrapper {
         String values[] = super.getParameterValues(name);
         if (SECRET_LIST.contains(name)) {
             log.info("name:{}", name);
-            for (int index = 0; index < values.length; index++) {
+            int length = values.length;
+            for (int index = 0; index < length; index++) {
                 values[index] = "secret";
             }
         }
