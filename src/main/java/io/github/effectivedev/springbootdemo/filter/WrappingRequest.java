@@ -22,20 +22,21 @@ public class WrappingRequest extends HttpServletRequestWrapper {
     public String getParameter(String name) {
 
         if (SECRET_LIST.contains(name)) {
-            log.info("name:{}", name);
-            return "secret";
+            String secret = "secret";
+            log.info("name:{}, value:{}", name, secret);
+            return secret;
         }
         return super.getParameter(name);
     }
-
     @Override
     public String[] getParameterValues(String name) {
         String values[] = super.getParameterValues(name);
         if (SECRET_LIST.contains(name)) {
-            log.info("name:{}", name);
+            String secret = "secret";
+            log.info("name:{}, value:{}", name, secret);
             int length = values.length;
             for (int index = 0; index < length; index++) {
-                values[index] = "secret";
+                values[index] = secret;
             }
         }
         return values;
