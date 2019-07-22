@@ -1,6 +1,5 @@
 package io.github.effectivedev.springbootdemo.messages;
 
-import com.sun.org.apache.xml.internal.utils.LocaleUtility;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
