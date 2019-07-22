@@ -17,10 +17,7 @@ public class SecretFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-
-        log.info("Start#########");
         chain.doFilter(new WrappingRequest((HttpServletRequest) request), response);
-        log.info("end###########");
     }
 
     @Override
